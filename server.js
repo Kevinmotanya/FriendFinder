@@ -14,29 +14,28 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Data
-var lunches = [
+var xxx = [
   {
-    lunch: "Beet & Goat Cheese Salad with minestrone soup."
+    friend: "123456789, 987654321."
   }, {
-    lunch: "Pizza, two double veggie burgers, fries with a Big Gulp"
+    friend: "123456789, 987654321"
   },
   {
-    lunch: "mashed potatoes and collard greens, ribeye steak"
-  }
+    friend: "123456789, 987654321"
 ];
 
 // Routes
 app.get("/weekday", function(req, res) {
-  res.render("index", lunches[0]);
+  res.render("index", xxx[0]);
 });
 
 app.get("/weekend", function(req, res) {
-  res.render("index", lunches[1]);
+  res.render("index", xxx[1]);
 });
 
 app.get("/lunches", function(req, res) {
-  res.render("all-lunches", {
-    foods: lunches,
+  res.render("all-xxxs", {
+    foods: xxx,
     eater: "david"
   });
 });
