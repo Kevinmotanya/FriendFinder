@@ -1,5 +1,21 @@
 var friends = [
     {
+        "name":"Camilla",
+        "photo":"link",
+        "scores":[
+            '1',
+			'1',
+			'5',
+			'5',
+			'5',
+			'5',
+			'5',
+			'5',
+			'5',
+			'1'
+        ]
+    },
+     {
         "name":"Zedy",
         "photo":"link",
         "scores":[
@@ -14,8 +30,24 @@ var friends = [
             4,
             1
         ]
+    },
+     {
+        "name":"pinchez",
+        "photo":"link",
+        "scores":[
+            '5',
+			'4',
+			'4',
+			'2',
+			'4',
+			'4',
+			'3',
+			'2',
+			'3',
+			'3'
+        ]
     },{
-        "name":"jbu",
+        "name":"zicky",
         //"photo":"https://www.rothamsted.ac.uk/sites/default/files/person-profile-images/jbu.jpg",
         "scores":[
             3,
