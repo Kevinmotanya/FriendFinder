@@ -11,10 +11,9 @@ module.exports = function(app){
 
     app.post("/api/friends", function(req,res) {
         var inputFriend = req.body;
-        // console.log(JSON.stringify(userInput));
-        
+        // console.log(JSON.stringify(userInput));             
         var match = friends[0];
-        var matchImage = '';
+        var matchAvatar = '';
         var differences = [];
         //existing friends in the friends array
         for(var i=0;i<friends.length;i++){
@@ -38,6 +37,6 @@ module.exports = function(app){
         //push to the array a new friend input 
         friends.push(inputFriend);
 
-        res.json({match, matchName, matchImage: matchImage});
+        res.json({match, matchName, matchImage: matchAvatar});
     });
 };
