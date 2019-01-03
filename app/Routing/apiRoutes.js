@@ -1,4 +1,8 @@
+//pull the list of friends
 var friends = require("../data/friends");
+
+// require path dependencies
+var path = require('path');
 
 module.exports = function(app){
     app.get("/api/friends", function(req,res) {
@@ -6,7 +10,9 @@ module.exports = function(app){
     });
 
     app.post("/api/friends", function(req,res) {
-        var newFriend = req.body;
+        var inputFriend = req.body;
+        // console.log(JSON.stringify(userInput));
+        
         var match = friends[0];
         var diffs = [];
         for(var i=0;i<friends.length;i++){
@@ -27,7 +33,7 @@ module.exports = function(app){
         };
 
 
-        friends.push(newFriend);
+        friends.push(inputFriend);
 
         res.json(match);
     });
