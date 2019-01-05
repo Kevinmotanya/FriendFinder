@@ -84,19 +84,5 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 
 
 - - -
-### Minimum Requirements
 
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Adding a README.md as well as adding this homework to your portfolio are required as well and more information can be found below. **This assignment must be deployed.**
-
-- - -
-
-### Hosting on Heroku
-
-Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database.
-
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details.
-
-See the [Supplemental Heroku Deployment Guide](../../03-Supplemental/HerokuGuide.md) for in-detail deployment instructions.
-
-- - -
 

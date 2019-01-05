@@ -1,4 +1,8 @@
+//pull the list of friends
 var friends = require("../data/friends");
+
+// require path dependencies
+var path = require('path');
 
 module.exports = function(app){
     app.get("/api/friends", function(req,res) {
@@ -6,20 +10,23 @@ module.exports = function(app){
     });
 
     app.post("/api/friends", function(req,res) {
-        var newFriend = req.body;
+        var inputFriend = req.body;
+        // console.log(JSON.stringify(userInput));             
         var match = friends[0];
-        var diffs = [];
+        var matchAvatar = '';
+        var differences = [];
+        //existing friends in the friends array
         for(var i=0;i<friends.length;i++){
-            var totalDiff = 0;
+            var differences = 0;
             for (var x=0;x<friends[i].scores.length;x++){
-                var compare = Math.abs(newFriend.scores[x] - friends[i].scores[x]);
-                totalDiff += compare;
+                var compare = Math.abs(inputFriend.scores[x] - friends[i].scores[x]);
+                differences += compare;
             };
-            diffs.push(totalDiff);
+            differences.push(differences);
         };
-        var least = diffs.min();
-        for (var i=0;i<diffs.length;i++){
-            if(diffs[i]===least){
+        var least = differences.min();
+        for (var i=0;i<differences.length;i++){
+            if(differences[i]===least){
                 match=friends[i];
                 return(match);
             };
@@ -27,8 +34,9 @@ module.exports = function(app){
         };
 
 
-        friends.push(newFriend);
+        //push to the array a new friend input 
+        friends.push(inputFriend);
 
-        res.json(match);
+        res.json({match, matchName, matchImage: matchAvatar});
     });
 };
