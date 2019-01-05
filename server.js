@@ -1,47 +1,27 @@
 // Dependencies
 var express = require("express");
-var exphbs = require("express-handlebars");
+var bodyParser = require("body-parser");
+var path = require("path");
 
-// Create an instance of the express app.
+//config the express app
 var app = express();
-
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
+//letting heroku choose a port
 var PORT = process.env.PORT || 8080;
 
-// Set Handlebars as the default templating engine.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// giving the public directory access to static CSS
+app.use(express.static(__dirname + "/app/css"));
 
-// Data
-var xxx = [
-  {
-    friend: "123456789, 987654321."
-  }, {
-    friend: "123456789, 987654321"
-  },
-  {
-    friend: "123456789, 987654321"
-];
+//adding app middleware that parses incoming requests
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Routes
-app.get("/weekday", function(req, res) {
-  res.render("index", xxx[0]);
-});
+// add the API and HTML routes
+require(path.join(__dirname,"./app/routing/apiRoutes.js"))(app);
+require(path.join(__dirname,"./app/routing/htmlRoutes.js"))(app);
 
-app.get("/weekend", function(req, res) {
-  res.render("index", xxx[1]);
-});
-
-app.get("/lunches", function(req, res) {
-  res.render("all-xxxs", {
-    foods: xxx,
-    eater: "david"
-  });
-});
-
-// Start our server so that it can begin listening to client requests.
+//listening to the connection port
 app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
+	console.log("App listening on PORT: " + PORT);
 });
