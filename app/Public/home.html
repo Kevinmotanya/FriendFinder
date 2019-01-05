@@ -2,37 +2,42 @@
 <html>
 
 <head>
-  <title>Fri3ndFind3r Beta</title>
+	<title>Fri3ndFind3r Beta</title>
 
 	<!-- Link to the jQuery Lib -->
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-  	<!-- Including Font Awesome Icons -->
-  	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+	<!-- Including Font Awesome Icons -->
+	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.min.css" rel="stylesheet">
 
 	<!-- Link to reset/css stylesheet -->
 	<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
 
 	<!-- Compiled and minified Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
 	<!-- Compiled and minified Materialize JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-          
-	
+
+
 </head>
+
 <body>
-<header>
-	
-	<nav>
-		<div class="navbar navbar-light" style="background-color: #e3f2fd;">
-				<i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
+	<header>
+
+		<nav>
+			<div class="navbar navbar-light" style="background-color: #e3f2fd;">
+				<i class="fa fa-meetup" aria-hidden="true" id=logo-icon></i>
 				<a href="/" class="brand-logo" id="logo">Fri3nd Find3r</a>
 				<ul class="right hide-on-med-and-down" id="head-nav-links">
-					<li><a href="/survey">Survey</a></li>
+					<li><a href="./survey">Survey</a></li>
 					<li><a href="/api/friends">API Friends List</a></li>
 					<li><a href="https://github.com/Kevinmotanya/FriendFinder">GitHub R3po</a></li>
 				</ul>
@@ -42,20 +47,69 @@
 	<!-- the main content of the home page -->
 	<div class="container">
 		<div class="row">
-		<div class="col s12 z-depth-5 mainpanel">
-		<div id="mainpanel-content">
-				<h1>Fri3nd Find3r</h1>
+			<div class="col s12 z-depth-5 mainpanel">
+				<div id="mainpanel-content">
+					<h1>Fri3nd Find3r</h1>
 					<div class="divider"></div>
 					<h2>Take this survey and</h2>
 					<h2>We will find you someone awesome</h2>
 					<a href="/survey">
-				<button class="btn waves-effect waves-light" type="submit" name="action">Hit the Survey
-					<i class="material-icons right">Go</i>
-					</button>
+						<button class="btn waves-effect waves-light" type="submit" name="action">Hit the Survey
+							<i class="material-icons right">Go</i>
+						</button>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- Footer -->
+	<footer class="page-footer font-small teal pt-4">
+
+		<!-- Footer Text -->
+		<div class="container-fluid text-center text-md-left">
+
+			<!-- Grid row -->
+			<div class="row">
+
+				<!-- Grid column -->
+				<div class="col-md-6 mt-md-0 mt-3">
+
+					<!-- Content -->
+					<h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae
+						commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat.
+						Itaque, culpa?</p>
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none pb-3">
+
+				<!-- Grid column -->
+				<div class="col-md-6 mb-md-0 mb-3">
+
+					<!-- Content -->
+					<h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi
+						aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>
+
+				</div>
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+		<!-- Footer Text -->
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">© 2018 Copyright:
+			<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
 </body>
+
 </html>
