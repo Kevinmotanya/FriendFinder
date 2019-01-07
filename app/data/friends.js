@@ -1,7 +1,7 @@
 var friends = [
     {
         "name":"Camilla",
-        "photo":"link",
+        "photo":"https://cp.peoplemedia.com/site/general/pm1897/images/2.jpg",
         "scores":[
             '1',
 			'1',
@@ -17,7 +17,7 @@ var friends = [
     },
      {
         "name":"Zedy",
-        "photo":"link",
+        "photo":"https://cp.peoplemedia.com/site/general/pm2515/images/m3.jpg",
         "scores":[
             5,
             1,
@@ -33,7 +33,7 @@ var friends = [
     },
      {
         "name":"pinchez",
-        "photo":"link",
+        "photo":"https://cp.peoplemedia.com/site/general/pm1897/images/w2.jpg",
         "scores":[
             '5',
 			'4',
@@ -48,7 +48,7 @@ var friends = [
         ]
     },{
         "name":"zicky",
-        //"photo":"https://www.rothamsted.ac.uk/sites/default/files/person-profile-images/jbu.jpg",
+        "photo":"https://thumbs.dreamstime.com/z/muslim-young-woman-wearing-hijab-white-32218346.jpg",
         "scores":[
             5,
             1,
