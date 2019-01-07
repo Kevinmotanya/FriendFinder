@@ -15,8 +15,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 //application Router
-require('./app/routing/api-routes.js')(app); 
-require('./app/routing/html-routes.js')(app);
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 //makes the server to initiate a connection port after listening
 app.listen(PORT, function() {
   // Log (server-side) when our server has started

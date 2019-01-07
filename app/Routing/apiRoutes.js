@@ -1,3 +1,4 @@
+var path = require("path");
 //pull the list of friends and uses the list for the survey
 var friends = require("../data/friends");
 
