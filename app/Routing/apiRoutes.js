@@ -1,4 +1,4 @@
-var path = require("path");
+
 //pull the list of friends and uses the list for the survey
 var friends = require("../data/friends");
 
@@ -6,7 +6,7 @@ var friends = require("../data/friends");
 module.exports = function (app) {
     //a GET route that displays JSON of all possible friends
     app.get('/api/friends', function (req, res) {
-        res.json(friendList);
+        res.json(friends);
     });
 
     app.post('/api/friends', function (req, res) {
